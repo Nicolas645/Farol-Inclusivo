@@ -1,2 +1,2 @@
-# Aprender-Sem-Barreiras
+# Farol-Inclusivo
 Projeto Softex sobre Acessibilidade
