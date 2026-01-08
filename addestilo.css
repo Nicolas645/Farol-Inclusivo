@@ -4,13 +4,9 @@ html {
     transition: font-size 0.2s ease-in-out;
 }
 
-/* Para não quebrar o código dos colegas, 
-   garantimos que os textos principais usem medidas relativas (rem).
-   Adicione as classes que você está usando na sua parte do projeto aqui:
-*/
 .sua-classe-de-container p, 
 .sua-classe-de-container h1, 
 .sua-classe-de-container h2, 
 .sua-classe-de-container button {
-    font-size: 1rem; /* Isso fará eles seguirem a raiz (html) */
+    font-size: 1rem;
 }
