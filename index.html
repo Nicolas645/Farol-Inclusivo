@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site educacional acessível para idosos e pessoas com pouca familiaridade com tecnologia">
+    <title>EducaTech - Tecnologia para Todos</title>
+    <script src="app.js" defer></script>
+</head>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Accessibility Controls -->
+    <div class="accessibility-controls" role="region" aria-label="Controles de acessibilidade">
+        <button id="contrast-toggle" class="accessibility-btn" aria-label="Alternar modo de alto contraste">
+            <i class="fas fa-adjust"></i>
+            <span class="btn-label">Alto Contraste</span>
+        </button>
+        <button id="font-increase" class="accessibility-btn" aria-label="Aumentar tamanho da fonte">
+            <i class="fas fa-font"></i>
+            <span class="btn-label">A+</span>
+        </button>
+        <button id="font-decrease" class="accessibility-btn" aria-label="Diminuir tamanho da fonte">
+            <i class="fas fa-font"></i>
+            <span class="btn-label">A-</span>
+        </button>
+        <button id="read-aloud" class="accessibility-btn" aria-label="Ler conteúdo em voz alta">
+            <i class="fas fa-volume-up"></i>
+            <span class="btn-label">Ouvir</span>
+        </button>
+        <button id="stop-read" class="accessibility-btn" aria-label="Parar leitura em voz alta">
+            <i class="fas fa-stop"></i>
+            <span class="btn-label">Parar</span>
+        </button>
+        <button id="keyboard-help" class="accessibility-btn" aria-label="Ajuda de navegação por teclado">
+            <i class="fas fa-keyboard"></i>
+            <span class="btn-label">Teclado</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" role="banner">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <h1>Educa<span>Tech</span></h1>
+                <p class="tagline">Tecnologia para Todos</p>
+            </div>
+            
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav" class="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#home" class="active"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#modules"><i class="fas fa-book-open"></i> Módulos</a></li>
+                    <li><a href="#progress"><i class="fas fa-chart-line"></i> Meu Progresso</a></li>
+                    <li><a href="#resources"><i class="fas fa-tools"></i> Recursos</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-content">
+                    <h2>Aprenda tecnologia de forma simples e acessível</h2>
+                    <p>Um site desenvolvido especialmente para idosos e pessoas com pouca familiaridade com tecnologia. Tutoriais práticos, objetivos e 100% acessíveis.</p>
+                    <a href="#modules" class="btn btn-primary">Começar a aprender</a>
+                </div>
+                <div class="hero-image" aria-hidden="true">
+                    <i class="fas fa-laptop-house"></i>
+                </div>
+            </section>
+
+            <!-- Modules Section -->
+            <section id="modules" class="modules-section">
+                <h2>Módulos de Aprendizado</h2>
+                <p class="section-description">Escolha um tema para começar a aprender. Cada módulo inclui texto simples, áudio, vídeo legendado e questionário interativo.</p>
+                
+                <div class="modules-grid">
+                    <!-- Module 1 -->
+                    <article class="module-card" id="module1">
+                        <div class="module-icon">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="module-content">
+                            <h3>Módulo 1: Criação e uso de e-mail</h3>
+                            <p>Aprenda a criar uma conta de e-mail gratuita, enviar e receber mensagens, organizar sua caixa de entrada e usar recursos básicos.</p>
+                            <div class="module-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <span class="progress-text">30% concluído</span>
+                            </div>
+                            <button class="btn btn-secondary open-module" data-module="1">Acessar módulo</button>
+                        </div>
+                    </article>
+                    
+                    <!-- Module 2 -->
+                    <article class="module-card" id="module2">
+                        <div class="module-icon">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="module-content">
+                            <h3>Módulo 2: Navegação segura na internet</h3>
+                            <p>Descubra como navegar com segurança, identificar sites confiáveis, criar senhas seguras e proteger seus dados pessoais online.</p>
+                            <div class="module-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 10%"></div>
+                                </div>
+                                <span class="progress-text">10% concluído</span>
+                            </div>
+                            <button class="btn btn-secondary open-module" data-module="2">Acessar módulo</button>
+                        </div>
+                    </article>
+                    
+        
+                    
+                    <!-- Module 3 -->
+                    <article class="module-card" id="module4">
+                        <div class="module-icon">
+                            <i class="fas fa-university" aria-hidden="true"></i>
+                        </div>
+                        <div class="module-content">
+                            <h3>Módulo 3: Serviços digitais essenciais</h3>
+                            <p>Aprenda a usar serviços online importantes como gov.br, bancos digitais, agendamentos de saúde e outros serviços essenciais.</p>
+                            <div class="module-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">Não iniciado</span>
+                            </div>
+                            <button class="btn btn-secondary open-module" data-module="4">Acessar módulo</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress" class="progress-section">
+                <h2>Meu Progresso</h2>
+                <p class="section-description">Acompanhe seu aprendizado e veja quanto você já evoluiu em cada módulo.</p>
+                
+                <div class="progress-container">
+                    <div class="progress-overall">
+                        <div class="progress-circle">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle class="progress-bg" cx="60" cy="60" r="54" fill="none" stroke-width="12"></circle>
+                                <circle class="progress-indicator" cx="60" cy="60" r="54" fill="none" stroke-width="12" stroke-dasharray="339.292" stroke-dashoffset="237.504"></circle>
+                            </svg>
+                            <div class="progress-percent">30%</div>
+                        </div>
+                        <div class="progress-info">
+                            <h3>Progresso Geral</h3>
+                            <p>Você completou <strong>1 de 4</strong> módulos</p>
+                            <p>Continue assim! Você está no caminho certo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-details">
+                        <h3>Detalhamento por módulo</h3>
+                        <ul class="progress-list">
+                            <li>
+                                <span class="module-name">Criação e uso de e-mail</span>
+                                <span class="module-progress">30%</span>
+                            </li>
+                            <li>
+                                <span class="module-name">Navegação segura na internet</span>
+                                <span class="module-progress">10%</span>
+                            </li>
+                            <li>
+                                <span class="module-name">Acesso a cursos gratuitos online</span>
+                                <span class="module-progress">0%</span>
+                            </li>
+                            <li>
+                                <span class="module-name">Serviços digitais essenciais</span>
+                                <span class="module-progress">0%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Module Modal -->
+    <div id="module-modal" class="modal" role="dialog" aria-labelledby="module-title" aria-hidden="true">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal" aria-label="Fechar modal">×</button>
+            
+            <div class="modal-header">
+                <h2 id="module-title">Criação e uso de e-mail</h2>
+                <div class="module-controls">
+                    <button id="audio-toggle" class="module-control-btn" aria-label="Reproduzir áudio do conteúdo">
+                        <i class="fas fa-volume-up"></i>
+                        <span>Ouvir conteúdo</span>
+                    </button>
+                    <button id="show-video" class="module-control-btn" aria-label="Mostrar vídeo explicativo">
+                        <i class="fas fa-video"></i>
+                        <span>Ver vídeo</span>
+                    </button>
+                    <button id="show-quiz" class="module-control-btn" aria-label="Abrir questionário">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Questionário</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Module Content Tabs -->
+                <div class="module-tabs">
+                    <div class="tab-nav" role="tablist">
+                        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="content-tab">Conteúdo</button>
+                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="video-tab">Vídeo</button>
+                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="quiz-tab">Questionário</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <!-- Content Tab -->
+                        <div id="content-tab" class="tab-pane active" role="tabpanel">
+                            <div class="module-step">
+                                <h3><i class="fas fa-check-circle"></i> Passo 1: Escolhendo um serviço de e-mail</h3>
+                                <p>Existem vários serviços de e-mail gratuitos. Os mais populares são Gmail (Google), Outlook (Microsoft) e Yahoo Mail. Para este tutorial, vamos usar o Gmail.</p>
+                                <div class="step-audio">
+                                    <audio id="step1-audio" controls>
+                                        <source src="#" type="audio/mpeg">
+                                        Seu navegador não suporta o elemento de áudio.
+                                    </audio>
+                                    <p class="audio-fallback">Áudio não disponível no momento. Use o botão "Ouvir conteúdo" acima.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="module-step">
+                                <h3><i class="fas fa-check-circle"></i> Passo 2: Criando sua conta</h3>
+                                <p>1. Acesse o site <strong>gmail.com</strong> no seu navegador<br>
+                                   2. Clique em "Criar conta"<br>
+                                   3. Preencha o formulário com seus dados pessoais<br>
+                                   4. Escolha um nome de usuário e senha segura<br>
+                                   5. Aceite os termos de serviço e clique em "Próxima"</p>
+                            </div>
+                            
+                            <div class="module-step">
+                                <h3><i class="fas fa-check-circle"></i> Passo 3: Enviando seu primeiro e-mail</h3>
+                                <p>1. Após fazer login, clique em "Escrever" no canto superior esquerdo<br>
+                                   2. No campo "Para", digite o endereço de e-mail do destinatário<br>
+                                   3. Preencha o assunto e escreva sua mensagem<br>
+                                   4. Clique em "Enviar"</p>
+                            </div>
+                            
+                            <div class="module-step">
+                                <h3><i class="fas fa-check-circle"></i> Passo 4: Organizando sua caixa de entrada</h3>
+                                <p>Você pode organizar seus e-mails criando pastas (chamadas de "rótulos" no Gmail):<br>
+                                   1. À esquerda da tela, clique em "Mais" e depois "Criar novo rótulo"<br>
+                                   2. Dê um nome para a pasta (ex: "Família", "Trabalho")<br>
+                                   3. Para mover um e-mail para uma pasta, arraste-o para o rótulo desejado</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Video Tab -->
+                        <div id="video-tab" class="tab-pane" role="tabpanel">
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-video" aria-hidden="true"></i>
+                                    <h3>Vídeo Explicativo</h3>
+                                    <p>Este vídeo mostra passo a passo como criar uma conta de e-mail no Gmail.</p>
+                                    <div class="video-legend">
+                                        <p><i class="fas fa-closed-captioning"></i> Legendas disponíveis</p>
+                                        <p><i class="fab fa-accessible-icon"></i> Tradução para Libras disponível</p>
+                                    </div>
+                                </div>
+                                <div class="video-controls">
+                                    <button class="btn btn-secondary" aria-label="Reproduzir vídeo">
+                                        <i class="fas fa-play"></i> Reproduzir vídeo
+                                    </button>
+                                    <button class="btn btn-secondary" aria-label="Ativar/desativar legendas">
+                                        <i class="fas fa-closed-captioning"></i> Legendas
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quiz Tab -->
+                        <div id="quiz-tab" class="tab-pane" role="tabpanel">
+                            <div class="quiz-container">
+                                <h3>Questionário: Criação e uso de e-mail</h3>
+                                <p class="quiz-description">Teste seu conhecimento respondendo às perguntas abaixo. Você precisa acertar pelo menos 3 de 5 para passar.</p>
+                                
+                                <form id="quiz-form">
+                                    <div class="quiz-question">
+                                        <p><strong>1. Qual destes NÃO é um serviço de e-mail gratuito?</strong></p>
+                                        <div class="quiz-options">
+                                            <label>
+                                                <input type="radio" name="q1" value="a">
+                                                <span>Gmail</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q1" value="b">
+                                                <span>Outlook</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q1" value="c">
+                                                <span>Facebook</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q1" value="d">
+                                                <span>Yahoo Mail</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="quiz-question">
+                                        <p><strong>2. O que é importante ao criar uma senha para o e-mail?</strong></p>
+                                        <div class="quiz-options">
+                                            <label>
+                                                <input type="radio" name="q2" value="a">
+                                                <span>Usar uma senha fácil de lembrar, como "123456"</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q2" value="b">
+                                                <span>Usar uma combinação de letras, números e símbolos</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q2" value="c">
+                                                <span>Usar a mesma senha de outras contas</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q2" value="d">
+                                                <span>Anotar a senha em um papel e colar no computador</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="quiz-question">
+                                        <p><strong>3. Para enviar um e-mail, em qual campo você deve colocar o endereço do destinatário?</strong></p>
+                                        <div class="quiz-options">
+                                            <label>
+                                                <input type="radio" name="q3" value="a">
+                                                <span>No campo "Assunto"</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q3" value="b">
+                                                <span>No campo "Para"</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q3" value="c">
+                                                <span>No corpo da mensagem</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="q3" value="d">
+                                                <span>No campo "CC"</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="button" id="submit-quiz" class="btn btn-primary">Enviar respostas</button>
+                                </form>
+                                
+                                <div id="quiz-result" class="quiz-result hidden">
+                                    <h3>Resultado do Questionário</h3>
+                                    <div class="result-score">
+                                        <p>Sua pontuação: <span id="score">0</span> de 5</p>
+                                        <p id="result-message"></p>
+                                    </div>
+                                    <button id="retry-quiz" class="btn btn-secondary">Tentar novamente</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keyboard Help Modal -->
+    <div id="keyboard-help-modal" class="modal" role="dialog" aria-labelledby="keyboard-help-title" aria-hidden="true">
+        <div class="modal-content small-modal">
+            <button id="close-keyboard-help" class="close-modal" aria-label="Fechar modal">×</button>
+            <h2 id="keyboard-help-title">Navegação por Teclado</h2>
+            <div class="modal-body">
+                <p>Use estas teclas para navegar no site:</p>
+                <ul class="keyboard-help-list">
+                    <li><strong>Tab</strong> - Mover para o próximo elemento</li>
+                    <li><strong>Shift + Tab</strong> - Mover para o elemento anterior</li>
+                    <li><strong>Enter</strong> - Ativar botão ou link</li>
+                    <li><strong>Espaço</strong> - Marcar/desmarcar caixa de seleção</li>
+                    <li><strong>Setas</strong> - Navegar entre opções</li>
+                    <li><strong>Esc</strong> - Fechar modal ou menu</li>
+                </ul>
+                <p>Para navegar entre os módulos, use a tecla Tab até chegar no módulo desejado e pressione Enter para abrir.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EducaTech</h3>
+                    <p>Tecnologia para Todos</p>
+                    <p>Um projeto educacional acessível para idosos e pessoas com pouca familiaridade com tecnologia.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#modules">Módulos</a></li>
+                        <li><a href="#progress">Meu Progresso</a></li>
+                        <li><a href="#resources">Recursos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Acessibilidade</h3>
+                    <p>Este site segue as diretrizes WCAG 2.1 para acessibilidade web.</p>
+                    <div class="accessibility-badges">
+                        <span class="accessibility-badge" aria-label="Site acessível">
+                            <i class="fas fa-universal-access"></i> Acessível
+                        </span>
+                        <span class="accessibility-badge" aria-label="Compatível com navegadores antigos">
+                            <i class="fas fa-desktop"></i> Compatível
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EducaTech - Tecnologia para Todos. Todos os direitos reservados.</p>
+                <p>Este é um projeto demonstrativo desenvolvido para fins educacionais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Libras Widget Placeholder -->
+    <div id="libras-widget" class="libras-widget" aria-label="Tradução para Libras">
+        <button class="libras-toggle" aria-label="Ativar/desativar tradução para Libras">
+            <i class="fas fa-sign-language"></i>
+            <span>Libras</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
