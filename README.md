@@ -32,3 +32,6 @@
   <li>React</li>
 </ul>
 <br><br>
+
+<h2>Link do Deploy:</h2>
+<p>https://farol-inclusivo.vercel.app/</p>
